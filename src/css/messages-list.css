@@ -1,0 +1,20 @@
+.messages-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  overflow-y: auto;
+  border: 1px solid green;
+}
+
+.messages-list__no-messagees {
+  
+}
+
+.messages-list__list {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 1;
+  row-gap: 5px;
+  padding: 10px;
+}

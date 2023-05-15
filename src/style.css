@@ -1,0 +1,24 @@
+@import './css/normalize.css';
+@import './css/global.css';
+@import './css/login-form.css';
+@import './css/page-main.css';
+@import './css/user-block.css';
+@import './css/user-info.css';
+@import './css/add-contact.css';
+@import './css/contacts-list.css';
+@import './css/contact.css';
+@import './css/chat-block.css';
+@import './css/chat-header.css';
+@import './css/messages-list.css';
+@import './css/message.css';
+@import './css/create-message.css';
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  padding: 20px;
+  background: linear-gradient(180deg, #00a884 0%, #00a884 10%, #eae6df 10%, #eae6df 100%);
+}

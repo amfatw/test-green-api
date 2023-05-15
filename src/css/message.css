@@ -1,0 +1,13 @@
+.message {
+  padding: 5px;
+}
+
+.message--outgoing {
+  background-color: lightblue;
+  align-self: flex-end;
+}
+
+.message--incoming {
+  background-color: lightcoral;
+  align-self: flex-start;
+}

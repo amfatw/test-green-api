@@ -1,0 +1,30 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: white;
+  border: 1px solid black;
+}
+
+.login-form__label {
+  margin-bottom: 5px;
+}
+
+.login-form__input {
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.login-form__input:last-of-type {
+  margin-bottom: 40px;
+}
+
+
+.login-form__button {
+  width: 200px;
+  height: 30px;
+  margin: 0 auto;
+}

@@ -1,0 +1,9 @@
+.page-main {
+  display: flex;
+  width: 900px;
+  height: 600px;
+
+  margin: 0 auto;
+
+  background-color: lightgoldenrodyellow;
+}
