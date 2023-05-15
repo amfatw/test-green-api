@@ -18,9 +18,12 @@ const loadUserInfo = async ({number, id, token}) => {
 
   const result = await response.json();
 
-  const {avatar, name} = result;
+  const userInfo = {
+    avatar: result.avatar,
+    name: result.name ? result.name : result.chatId
+  };
 
-  return {avatar, name};
+  return userInfo;
 }
 
 export { loadUserInfo }; 
