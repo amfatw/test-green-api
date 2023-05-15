@@ -23,6 +23,12 @@ const AddContact = ({addContact}) => {
     setInputNumber('');
   }
 
+  const handleEnter = (event) => {
+    if (event.key !== 'Enter') return;
+
+    handleAddButtonClick();
+  }
+
 
   return (
     <div className='add-contact'>
@@ -31,6 +37,7 @@ const AddContact = ({addContact}) => {
         type="number"
         value={inputNumber}
         onChange={(e) => setInputNumber(e.target.value)}
+        onKeyDown={handleEnter}
       />
       <button 
         className='add-contact__add-button'

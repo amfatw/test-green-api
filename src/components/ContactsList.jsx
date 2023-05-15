@@ -1,4 +1,11 @@
 const ContactsList = ({contacts, handleContactClick, currentChat}) => {
+  const onContactClick = (event, contact) => {
+    event.preventDefault();
+
+    handleContactClick(contact);
+  }
+
+
   return (
     <ul className='contacts-list'>
       {contacts.map((contact) => {
@@ -13,16 +20,22 @@ const ContactsList = ({contacts, handleContactClick, currentChat}) => {
             >
             <button
               className={classes}
-              onClick={() => handleContactClick(contact)
-              }>
+              onClick={(event) => onContactClick(event, contact)}
+            >
               <div className='contact__image-container'>
-                <img
-                  className='contact__image'
-                  src={avatar} 
-                  alt={name} 
+                {avatar &&
+                  <img
+                    className='contact__image'
+                    src={avatar} 
+                    alt={name} 
                   />
+                }
               </div>
-              <p>{name ? name : 'unknown'}</p>
+              <p
+                className='contact__name'
+              >
+                {name ? name : chatId}
+              </p>
             </button>
           </li>
         )

@@ -10,7 +10,7 @@ const ChatBlock = ({currentChat, closeChat, messages, addMessage}) => {
   return (
     <section className='chat-block'>
       {!currentChat.chatId
-        ? <p>Сhoose a chat to start messeging</p>
+        ? <p className='chat-block__no-chat'>Сhoose a chat to start messaging</p>
         : <>
             <ChatHeader
               currentChat={currentChat}

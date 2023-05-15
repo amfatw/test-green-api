@@ -28,6 +28,12 @@ const CreateMessage = ({chatId, addMessage}) => {
     addMessage(sendedMessage);
   }
 
+  const handleEnter = (event) => {
+    if (event.key !== 'Enter') return;
+
+    handleSendMessageClick(chatId, messageText);
+  }
+
 
   return (
     <div className='create-message'>
@@ -36,9 +42,10 @@ const CreateMessage = ({chatId, addMessage}) => {
         type="text" 
         value={messageText}
         onChange={(e) => setMessageText(e.target.value)}
+        onKeyDown={handleEnter}
       />
       <button 
-        className='send-message' 
+        className='create-message__send-message' 
         type='button'
         onClick={() => handleSendMessageClick(chatId, messageText)}
       >

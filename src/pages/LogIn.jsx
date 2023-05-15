@@ -37,6 +37,12 @@ const LogIn = ({logIn}) => {
     logIn(formData)
   }
 
+  const handleEnter = (event) => {
+    if (event.key !== 'Enter') return;
+
+    handleButtonClick();
+  }
+
 
   return (
     <form className='login-form'>
@@ -53,6 +59,7 @@ const LogIn = ({logIn}) => {
         value={formData.id}
         disabled={isChecking}
         onChange={handleInputChange}
+        onKeyDown={handleEnter}
       />
 
       <label 
@@ -68,6 +75,7 @@ const LogIn = ({logIn}) => {
         value={formData.token}
         disabled={isChecking}
         onChange={handleInputChange}
+        onKeyDown={handleEnter}
       />
       <button
         className='login-form__button'

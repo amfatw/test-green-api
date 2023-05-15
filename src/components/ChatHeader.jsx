@@ -8,21 +8,21 @@ const ChatHeader = ({currentChat, closeChat}) => {
         className='chat-header__close-button'
         onClick={closeChat}
       >
-        close
+        <span className='visually-hidden'>close chat</span>
       </button>
-      <div className='chat-header__chat-info'>
-        <div className='chat-header__chat-image-container'>
+      <p 
+        className='chat-header__chat-name'
+      >
+        {name}
+      </p>
+      <div className='chat-header__chat-image-container'>
+        {avatar &&
           <img 
             className='chat-header__chat-image' 
             src={avatar} 
             alt={name}
           />
-        </div>
-        <p 
-          className='chat-header__chat-name'
-        >
-          {name}
-        </p>
+        }
       </div>
     </div>
   )
