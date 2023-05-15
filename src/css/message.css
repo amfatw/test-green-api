@@ -1,13 +1,59 @@
 .message {
-  padding: 5px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  padding: 10px;
+  border-radius: 15px;
 }
 
 .message--outgoing {
-  background-color: lightblue;
   align-self: flex-end;
+  border-bottom-right-radius: 0;
+
+  background-color: lightgreen;
+}
+
+.message--outgoing::before {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid lightgreen;
+  border-right: 10px solid transparent;
 }
 
 .message--incoming {
-  background-color: lightcoral;
   align-self: flex-start;
+  border-bottom-left-radius: 0;
+  
+  background-color: lightblue;
+}
+
+.message--incoming::before {
+  position: absolute;
+  bottom: 0;
+  right: 100%;
+
+  content: '';
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid lightblue;
+  border-left: 10px solid transparent;
+}
+
+.message__text {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+}
+
+.message__time {
+  align-self: flex-end;
+
+  font-size: 12px;
+  color: gray;
 }

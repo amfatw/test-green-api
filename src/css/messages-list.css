@@ -1,20 +1,37 @@
 .messages-list {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  width: 100%;
 
   overflow-y: auto;
-  border: 1px solid green;
+
+  background-image:  radial-gradient(rgba(144, 238, 144, 1) 0.9px, transparent 0.9px), radial-gradient(rgba(144, 238, 144, 1) 0.9px, rgb(228, 255, 228) 0.9px);
+  background-size: 36px 36px;
+  background-position: 0 0,18px 18px;
 }
 
 .messages-list__no-messagees {
-  
+  font-size: 20px;
 }
 
 .messages-list__list {
   display: flex;
   flex-direction: column-reverse;
   flex-grow: 1;
+  width: 100%;
   row-gap: 5px;
-  padding: 10px;
+  padding: 10px 30px;
+}
+
+.messages-list__loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  font-size: 20px;
+
+  transform: translate(-50%, -50%);
 }

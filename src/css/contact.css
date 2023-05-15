@@ -5,18 +5,36 @@
 .contact__item {
   display: flex;
   align-items: center;
-  column-gap: 5px;
-  width: 100%;
-  padding: 5px;
+  column-gap: 10px;
+  height: 70px;
+  padding: 10px 20px;
+  border: 0;
+  border-bottom: 1px solid lightgray;
+
+  cursor: pointer;
+  background-color: lemonchiffon;
+}
+
+.contact__item:hover, 
+.contact__item:focus {
+  background-color: rgba(144, 238, 144, 0.5);
 }
 
 .contact__item--current {
-  background-color: red;
+  background-color: rgba(144, 238, 144, 0.5);
 }
 
 .contact__image-container {
+  flex-shrink: 0;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  background-color: gray;
   overflow: hidden;
+}
+
+.contact__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

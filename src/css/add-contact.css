@@ -1,14 +1,26 @@
 .add-contact {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   column-gap: 10px;
-  padding: 10px;
-  border: 1px solid black;
+  padding: 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 .add-contact__number-input {
-  padding: 5px;
+  height: 30px;
+  padding: 5px 10px;
   border-radius: 15px;
+  border: 1px solid black;
+
+  background-color: rgba(144, 238, 144, 0.5);
+
+  text-align: center;
+}
+
+.add-contact__number-input:hover, 
+.add-contact__number-input:focus {
+  background-color: rgba(144, 238, 144, 1);
 }
 
 .add-contact__add-button {
@@ -17,20 +29,38 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
+  border: 1px solid black;
+
+  cursor: pointer;
+  background-color: rgba(144, 238, 144, 0.5);
+}
+
+.add-contact__add-button:hover,
+.add-contact__add-button:focus {
+  background-color: rgba(144, 238, 144, 1);
 }
 
 .add-contact__add-button::after, 
 .add-contact__add-button::before {
   position: absolute;
-  left: 3px;
-  top: 12px;
 
   content: '';
-  width: 20px;
-  height: 4px;
+
   background-color: black;
 }
 
 .add-contact__add-button::before {
-  transform: rotate(90deg);
+  top: 6px;
+  left: 13px;
+
+  width: 2px;
+  height: 16px;
+}
+
+.add-contact__add-button::after {
+  top: 13px;
+  left: 6px;
+
+  width: 16px;
+  height: 2px;
 }
