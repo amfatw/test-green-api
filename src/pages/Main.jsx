@@ -82,7 +82,7 @@ const Main = () => {
     if (!newMessage) {
       setTimeout(() => {
         watchNewMessages(id, token);
-      }, 10 * 000);
+      }, 10000);
       
       return;
     }
